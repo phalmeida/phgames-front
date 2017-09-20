@@ -10,7 +10,8 @@ import {LayoutCompletoComponent} from './containers/layout-completo/layout-compl
 // Import routing module
 import {routing} from './app.routing';
 import { HomeComponent } from './home/home.component';
-import {VersionsModule} from "./versions/versions.module";
+import {VersionsModule} from './versions/versions.module';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import {VersionsModule} from "./versions/versions.module";
         RodapeComponent,
         MenuComponent,
         LayoutCompletoComponent,
-        HomeComponent
+        HomeComponent,
+        CategoriesComponent
     ],
     imports: [
         BrowserModule,
