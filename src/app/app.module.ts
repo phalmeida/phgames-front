@@ -10,8 +10,11 @@ import {LayoutCompletoComponent} from './containers/layout-completo/layout-compl
 // Import routing module
 import {routing} from './app.routing';
 import { HomeComponent } from './home/home.component';
-import {VersionsModule} from './versions/versions.module';
 import { CategoriesComponent } from './categories/categories.component';
+
+import {VersionsModule} from './versions/versions.module';
+import {VersionsService} from "./versions/versions.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
@@ -26,9 +29,12 @@ import { CategoriesComponent } from './categories/categories.component';
     imports: [
         BrowserModule,
         routing,
+        HttpModule,
         VersionsModule
     ],
-    providers: [],
+    providers: [
+        VersionsService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
