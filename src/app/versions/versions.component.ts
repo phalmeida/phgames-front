@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Version} from "./shared/version";
+import {VersionsService} from "./versions.service";
 
 @Component({
   selector: 'app-versions',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VersionsComponent implements OnInit {
 
-  constructor() { }
+  public versions: Version[] = [];
+
+  constructor(private versionsService: VersionsService) { }
 
   ngOnInit() {
+
+    this.versionsService.getVersions().subscribe(
+        data => this.versions = data
+    );
+
   }
 
 }
