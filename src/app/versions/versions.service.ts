@@ -12,7 +12,6 @@ export class VersionsService {
   private url: string = "http://phgames.app/api/versions";
 
   constructor(private http: Http) {
-
   }
 
   getVersions(){
